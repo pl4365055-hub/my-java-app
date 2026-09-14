@@ -22,7 +22,7 @@ jobs:
           cache: 'maven'
 
       - name: build with Maven
-        run: mvm compile
+        run: mvn compile
 
       - name: Run Unit Tests
         run: mvn test
