@@ -205,7 +205,7 @@ paths-ignore:
 - `actions/upload-artifact` 只會保存指定路徑的檔案，不能自動產生 Docker image。
 - workflow 中的每一步都會影響後續步驟，例如必須先 package，才能上傳 `target/*.jar`。
 
-### 難點
+### 😵‍💫難點
 
 - 分辨 `exit code 127` 是命令不存在，而不是 Java 程式本身失敗。
 - 分辨 Java 8 執行 Java 17 編譯結果時的 `UnsupportedClassVersionError`。
