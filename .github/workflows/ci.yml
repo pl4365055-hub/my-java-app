@@ -32,12 +32,13 @@ jobs:
         run: mvn test
 
       # 範例：將 Maven 打包出來的 JAR 檔上傳為 Artifact
-      - name: Package with Maven
-        run: mvn package -DskipTests # 產生 target/*.jar
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: java-app-jar
-          path: target/*.jar
-          retention-days: 7 # 設定保存天數
+      # !!!! 不要留保, github 會收storage費用
+      #- name: Package with Maven
+      #  run: mvn package -DskipTests # 產生 target/*.jar
+#
+      #- name: Upload Build Artifact
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: java-app-jar
+      #    path: target/*.jar
+      #    retention-days: 7 # 設定保存天數
